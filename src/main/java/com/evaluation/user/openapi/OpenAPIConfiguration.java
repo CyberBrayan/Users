@@ -9,6 +9,7 @@ import io.swagger.v3.oas.models.servers.Server;
 @Configuration
 public class OpenAPIConfiguration {
 	
+	//Esta configuración sirve para que el browser no bloquee la petición en un entorno seguro (HTTPS)
 	@Bean
     public OpenAPI openAPI() {
         return new OpenAPI()
