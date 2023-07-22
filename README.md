@@ -12,7 +12,7 @@ La aplicación está alojada en la siguiente URL:
 
 ### Crear un Usuario
 
-Puedes crear un nuevo usuario enviando una solicitud POST al siguiente endpoint: /users/create
+Puedes crear un nuevo usuario enviando una solicitud POST al siguiente endpoint: **/users/create**
 
 Asegúrate de utilizar el siguiente JSON en el cuerpo de la solicitud para probarlo:
 
