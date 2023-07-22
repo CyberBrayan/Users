@@ -8,6 +8,14 @@ La aplicación está alojada en la siguiente URL:
 
 [users-production.up.railway.app](https://users-production.up.railway.app)
 
+## Swagger
+
+La API de esta aplicación está documentada con Swagger. Puedes acceder a la documentación interactiva de Swagger en el siguiente enlace:
+
+[Documentación Swagger](https://users-production.up.railway.app/doc/swagger-ui/index.html)
+
+Aquí encontrarás información detallada sobre los endpoints disponibles, los parámetros requeridos, las respuestas esperadas y podrás probar los endpoints directamente desde el navegador.
+
 ## Endpoints Disponibles
 
 ### Crear un Usuario
