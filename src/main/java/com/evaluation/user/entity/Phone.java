@@ -2,6 +2,8 @@ package com.evaluation.user.entity;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -26,6 +28,7 @@ public class Phone {
 	protected int contryCode;
 	
 	@ManyToOne
+	@JsonBackReference
     @JoinColumn(name = "id_user")
     private User user;
 	

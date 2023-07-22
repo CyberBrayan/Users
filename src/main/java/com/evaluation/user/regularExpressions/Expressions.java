@@ -15,7 +15,7 @@ public class Expressions {
 	}
 	
     public boolean isValidPassword(String password) {
-        Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\\-_+=]).{8,16}$");
+        Pattern pattern = Pattern.compile(this.config.getExpression());
         Matcher matcher = pattern.matcher(password);
 
         return matcher.matches();

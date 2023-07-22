@@ -17,6 +17,7 @@ import com.evaluation.user.responses.ErrorMessage;
 import com.evaluation.user.responses.UserResponse;
 import com.evaluation.user.security.JwtService;
 import com.evaluation.user.service.UserService;
+import com.evaluation.user.service.PhoneService;
 import com.evaluation.user.entity.Phone;
 import com.evaluation.user.entity.User;
 
@@ -30,7 +31,10 @@ public class UserController {
     private JwtService jwtService;
 	
 	@Autowired
-	private UserService service;
+	private UserService userService;
+	
+	@Autowired
+	private PhoneService phoneService;
 	
 	public UserController(ConfigExpressions config) {
 		this.validator = new Expressions(config);
@@ -38,9 +42,9 @@ public class UserController {
 	
 	@PostMapping("/create")
     public ResponseEntity<?> createUser(@RequestBody User u) {
-		
+		try {
 			//Verificar existencia de email
-			if (service.isEmailAlreadyRegistered(u.getEmail())) {
+			if (userService.isEmailAlreadyRegistered(u.getEmail())) {
 				String errorMessage = "El email ya está registrado";
 	            return new ResponseEntity<>(new ErrorMessage(errorMessage), HttpStatus.BAD_REQUEST);
 	        }
@@ -59,10 +63,11 @@ public class UserController {
 
 			u.setToken(jwtService.generateToken(u.getEmail()));
 			
-			User savedUser = service.save(u);
+			User savedUser = userService.save(u);
 			
 			for (Phone phone : u.getPhones()) {
 	            phone.setUser(savedUser);
+	            phoneService.save(phone);
 	        }
 			
 			UserResponse userResponse = new  UserResponse(
@@ -74,12 +79,16 @@ public class UserController {
 					savedUser.isIsactive());
 			
 			return new ResponseEntity<>(userResponse, HttpStatus.OK);
+		}catch(Exception e) {
+			String errorMessage = "Ocurrio un error al crear el usuario";
+            return new ResponseEntity<>(new ErrorMessage(errorMessage), HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		
     }
 	
 	@GetMapping("/list")
     public List<User> listUser() {
-        return service.listar();
+		return userService.listar();
     }
 	
     public boolean isValidPassword(String password) {

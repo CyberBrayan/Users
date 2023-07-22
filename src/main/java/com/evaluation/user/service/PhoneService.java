@@ -30,8 +30,7 @@ public class PhoneService implements IPhoneService {
 
 	@Override
 	public Phone save(Phone u) {
-		// TODO Auto-generated method stub
-		return null;
+		return iPhone.save(u);
 	}
 
 	@Override

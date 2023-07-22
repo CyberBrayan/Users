@@ -13,11 +13,18 @@ import java.util.Date;
 
 @Service
 public class JwtService {
+	
+	private final ConfigJwtService config;
+	
+	public JwtService(ConfigJwtService config) {
+		this.config = config;
+	}
 
     public String generateToken(String email) {
     	
         LocalDateTime now = LocalDateTime.now();
-        LocalDateTime expirationDateTime = now.plusMinutes(1440);
+        System.out.println(this.config.getJwtExpiration());
+        LocalDateTime expirationDateTime = now.plusMinutes(this.config.getJwtExpiration());
 
         Date issuedAt = Date.from(now.atZone(ZoneId.systemDefault()).toInstant());
         Date expirationDate = Date.from(expirationDateTime.atZone(ZoneId.systemDefault()).toInstant());

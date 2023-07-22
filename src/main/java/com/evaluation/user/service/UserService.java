@@ -18,7 +18,7 @@ public class UserService implements IUserService {
 
 	@Override
 	public List<User> listar() {
-		return  (List<User>)iUser.findAll();
+		return  (List<User>) iUser.findAll();
 	}
 
 	@Override
