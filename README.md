@@ -43,7 +43,7 @@ Debe contener al menos una letra minúscula, una letra mayúscula y un dígito.
 
 ### Listar Usuarios con sus Teléfonos
 
-Para ver la lista de usuarios con sus teléfonos registrados, puedes enviar una solicitud GET al siguiente endpoint: ####/users/list
+Para ver la lista de usuarios con sus teléfonos registrados, puedes enviar una solicitud GET al siguiente endpoint: **/users/list**
 
 ## Detalles Técnicos
 
