@@ -106,8 +106,6 @@ La aplicación implementa validaciones para garantizar que la contraseña cumpla
 
 ## ¡Agradecimientos!
 
-Gracias por utilizar nuestra aplicación de Usuarios. Si tienes alguna pregunta, problema o sugerencia, no dudes en contactarnos.
+Gracias por utilizar nuestra aplicación de Usuarios. Si tienes alguna pregunta, problema o sugerencia, no dudes en contactarme.
 
-¡Esperamos que disfrutes utilizando la aplicación!
-
-### users-production.up.railway.app
+¡Espero que disfrutes utilizando la aplicación!
