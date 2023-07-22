@@ -1,6 +1,6 @@
 # Bienvenido a la aplicación de Usuarios
 
-¡Gracias por visitar la aplicación de Usuarios! Aquí puedes realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) relacionadas con usuarios y sus teléfonos. A continuación, te proporcionamos información sobre cómo utilizar la aplicación y las funcionalidades disponibles.
+¡Gracias por visitar la aplicación de Usuarios! Aquí puedes realizar operaciones como crear y listas usuarios y sus teléfonos. A continuación, te proporcionamos información sobre cómo utilizar la aplicación y las funcionalidades disponibles.
 
 ## URL de la Aplicación
 
