@@ -7,9 +7,9 @@ import com.evaluation.user.entity.User;
 
 public interface IUserService {
 	
-	public List<User> listar();
+	public List<User> getAllUsers();
 	public Optional<User> listarId();
-	public User save(User u);
+	public User saveUser(User u);
 	public void delete(int id);
 
 }

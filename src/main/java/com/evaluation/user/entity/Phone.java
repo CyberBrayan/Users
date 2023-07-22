@@ -19,6 +19,7 @@ public class Phone {
 	@Column
 	protected UUID id;
 	
+	@Column(nullable = false)
 	protected String number;
 	
 	@Column(nullable = false)

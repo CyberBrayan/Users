@@ -63,11 +63,11 @@ public class UserController {
 
 			u.setToken(jwtService.generateToken(u.getEmail()));
 			
-			User savedUser = userService.save(u);
+			User savedUser = userService.saveUser(u);
 			
 			for (Phone phone : u.getPhones()) {
 	            phone.setUser(savedUser);
-	            phoneService.save(phone);
+	            phoneService.savePhone(phone);
 	        }
 			
 			UserResponse userResponse = new  UserResponse(
@@ -88,7 +88,7 @@ public class UserController {
 	
 	@GetMapping("/list")
     public List<User> listUser() {
-		return userService.listar();
+		return userService.getAllUsers();
     }
 	
     public boolean isValidPassword(String password) {

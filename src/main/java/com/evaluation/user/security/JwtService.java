@@ -21,9 +21,7 @@ public class JwtService {
 	}
 
     public String generateToken(String email) {
-    	
         LocalDateTime now = LocalDateTime.now();
-        System.out.println(this.config.getJwtExpiration());
         LocalDateTime expirationDateTime = now.plusMinutes(this.config.getJwtExpiration());
 
         Date issuedAt = Date.from(now.atZone(ZoneId.systemDefault()).toInstant());

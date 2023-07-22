@@ -9,7 +9,7 @@ public interface IPhoneService {
 	
 	public List<Phone> listar();
 	public Optional<Phone> listarId();
-	public Phone save(Phone u);
+	public Phone savePhone(Phone u);
 	public void delete(int id);
 
 }

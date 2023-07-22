@@ -17,7 +17,7 @@ public class UserService implements IUserService {
 	private InterfaceUser iUser;
 
 	@Override
-	public List<User> listar() {
+	public List<User> getAllUsers() {
 		return  (List<User>) iUser.findAll();
 	}
 
@@ -28,14 +28,13 @@ public class UserService implements IUserService {
 	}
 
 	@Override
-	public User save(User u) {
+	public User saveUser(User u) {
 		return iUser.save(u);
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	public boolean isEmailAlreadyRegistered(String email) {

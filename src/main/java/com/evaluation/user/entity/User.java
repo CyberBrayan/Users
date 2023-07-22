@@ -45,7 +45,7 @@ public class User {
 	@Column(nullable = true)
 	protected Date last_login;
 	
-	@Column(nullable = true)
+	@Column(nullable = false)
 	protected String token;
 	
 	@Column(nullable = false)

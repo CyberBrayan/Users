@@ -29,7 +29,7 @@ public class PhoneService implements IPhoneService {
 	}
 
 	@Override
-	public Phone save(Phone u) {
+	public Phone savePhone(Phone u) {
 		return iPhone.save(u);
 	}
 

@@ -18,5 +18,4 @@ public class ConfigExpressions {
     	return environment.getProperty("spring.password.nisum");
     }
 	
-
 }
