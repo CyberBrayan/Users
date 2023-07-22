@@ -33,7 +33,7 @@ Asegúrate de utilizar el siguiente JSON en el cuerpo de la solicitud para proba
                 "countryCode": "10"
             }
         ]
-}
+}```
 
 #### Notas sobre la contraseña:
 
