@@ -43,7 +43,6 @@ Asegúrate de utilizar el siguiente JSON en el cuerpo de la solicitud para proba
         ]
 }
 ```
-La cual muestra toda la información de un usuario sin restricciones, solo como ejemplo. En un escenario real se mostraría solo data confiable.
 
 #### Notas sobre la contraseña:
 
