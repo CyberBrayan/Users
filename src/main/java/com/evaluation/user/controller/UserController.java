@@ -18,6 +18,7 @@ import com.evaluation.user.responses.UserResponse;
 import com.evaluation.user.security.JwtService;
 import com.evaluation.user.service.UserService;
 import com.evaluation.user.service.PhoneService;
+import com.evaluation.user.entity.NotificationCommercialRequest;
 import com.evaluation.user.entity.Phone;
 import com.evaluation.user.entity.User;
 
@@ -90,6 +91,12 @@ public class UserController {
     public List<User> listUser() {
 		return userService.getAllUsers();
     }
+	
+	@PostMapping("/sendNotification")
+	public ResponseEntity<Object> sendNotificationCommercial(String contentType, String apiSubscription, NotificationCommercialRequest request){
+	    System.out.println(request.getRuc());
+		return ResponseEntity.ok().build();
+	  }
 	
     public boolean isValidPassword(String password) {
         return validator.isValidPassword(password);
